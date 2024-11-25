@@ -6,12 +6,8 @@ public class MapGenerator : MonoBehaviour
 {
     public GameObject cube;
     public int width, height, large;
-    public int seed;
-    public int detail;
+    public float seed, detail;
 
-    private void Start() {
-        GenerateMap();
-    }
 
     public void GenerateMap()
     {
@@ -19,12 +15,17 @@ public class MapGenerator : MonoBehaviour
         {
             for (int z = 0; z < large; z++)
             {
-                height = (int)(Mathf.PerlinNoise((x / 2 + seed) / detail, (z / 2 + seed) / detail) * 10);
+                height = (int)(Mathf.PerlinNoise((x / 2 + seed) / detail, (z / 2 + seed) / detail) * detail);
                 for (int y = 0; y < height; y++)
                 {
                     Instantiate(cube, new Vector3(x, y, z), Quaternion.identity);
                 }
             }
         }
+    }
+
+    private void Start() 
+    {
+        GenerateMap();
     }
 }

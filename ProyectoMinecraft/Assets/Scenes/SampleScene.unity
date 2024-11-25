@@ -342,7 +342,7 @@ MonoBehaviour:
   height: 12
   large: 100
   seed: 20
-  detail: 300000
+  detail: 30
 --- !u!4 &1462932911
 Transform:
   m_ObjectHideFlags: 0
