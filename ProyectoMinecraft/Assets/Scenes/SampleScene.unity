@@ -338,11 +338,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 8014389115020083256, guid: d403f8960f2807742ae730c814c26a14, type: 3}
-  width: 100
-  height: 12
-  large: 100
+  width: 30
+  height: 10
+  large: 30
   seed: 20
-  detail: 30
+  detail: 40
 --- !u!4 &1462932911
 Transform:
   m_ObjectHideFlags: 0
